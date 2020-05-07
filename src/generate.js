@@ -87,7 +87,11 @@ const generate = overrides => {
     facialHair: {
       id: Math.random() < 0.5 ? getID("facialHair") : "none"
     },
-    eye: { id: getID("eye"), angle: eyeAngle },
+    eye: {
+      id: getID("eye"),
+      angle: eyeAngle,
+      size: roundTwoDecimals(0.9 + 0.2 * Math.random())
+    },
     eyebrow: {
       id: getID("eyebrow"),
       angle: Math.round(Math.random() * 20 - 10)
