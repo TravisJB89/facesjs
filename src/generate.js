@@ -17,7 +17,8 @@ const colors = [
       "#B55239",
       "#e9c67b",
       "#D7BF91"
-    ]
+    ],
+    eye: ["#6c89cd", "#6ca596", "#432f2d", "#634842"]
   },
   {
     skin: "#eab08d",
@@ -29,15 +30,74 @@ const colors = [
       "#2C1608",
       "#e9c67b",
       "#D7BF91"
+    ],
+    eye: ["#6c89cd", "#6ca596", "#432f2d", "#634842"]
+  },
+  {
+    skin: "#ce967d",
+    hair: ["#272421", "#423125"],
+    eye: [
+      "#6c89cd",
+      "#432f2d",
+      "#432f2d",
+      "#634842",
+      "#755048",
+      "#432f2d",
+      "#432f2d",
+      "#634842",
+      "#755048"
     ]
   },
-  { skin: "#ce967d", hair: ["#272421", "#423125"] },
-  { skin: "#bb876f", hair: ["#272421"] },
-  { skin: "#aa816f", hair: ["#272421"] },
-  { skin: "#a67358", hair: ["#272421"] },
-  { skin: "#ad6453", hair: ["#272421"] },
-  { skin: "#74453d", hair: ["#272421"] },
-  { skin: "#5c3937", hair: ["#272421"] }
+  {
+    skin: "#bb876f",
+    hair: ["#272421"],
+    eye: [
+      "#6c89cd",
+      "#4f4140",
+      "#432f2d",
+      "#634842",
+      "#755048",
+      "#432f2d",
+      "#432f2d",
+      "#634842",
+      "#755048"
+    ]
+  },
+  {
+    skin: "#aa816f",
+    hair: ["#272421"],
+    eye: [
+      "#6c89cd",
+      "#4f4140",
+      "#432f2d",
+      "#634842",
+      "#755048",
+      "#432f2d",
+      "#432f2d",
+      "#634842",
+      "#755048"
+    ]
+  },
+  {
+    skin: "#a67358",
+    hair: ["#272421"],
+    eye: ["#432f2d", "#432f2d", "#634842", "#755048"]
+  },
+  {
+    skin: "#ad6453",
+    hair: ["#272421"],
+    eye: ["#432f2d", "#432f2d", "#634842", "#755048"]
+  },
+  {
+    skin: "#74453d",
+    hair: ["#272421"],
+    eye: ["#432f2d", "#432f2d", "#634842", "#755048"]
+  },
+  {
+    skin: "#5c3937",
+    hair: ["#272421"],
+    eye: ["#432f2d", "#432f2d", "#634842", "#755048"]
+  }
 ];
 
 const defaultTeamColors = ["#0d435e", "#f0494a", "#cccccc"];
@@ -51,6 +111,7 @@ const generate = overrides => {
   const skinColor = palette.skin;
   const hairColor =
     palette.hair[Math.floor(Math.random() * palette.hair.length)];
+  const eyeColor = palette.eye[Math.floor(Math.random() * palette.eye.length)];
   const isFlipped = Math.random() < 0.5;
 
   const face = {
@@ -90,6 +151,7 @@ const generate = overrides => {
     eye: {
       id: getID("eye"),
       angle: eyeAngle,
+      color: eyeColor,
       size: roundTwoDecimals(0.9 + 0.2 * Math.random())
     },
     eyebrow: {
