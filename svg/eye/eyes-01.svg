@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="60" height="60">
+	<g id="eyes-1">
+		<path id="white" d="M30 55C16.17 55 5 43.82 5 30C5 16.17 16.17 5 30 5C43.82 5 55 16.17 55 30C55 43.82 43.82 55 30 55Z" fill="#fff" stroke="#000" stroke-width="1" />
+		<path id="pupil" d="M30 23C20 23 20 38 30 38C40 38 40 23 30 23Z" fill="#000" stroke="#000" stroke-width="1" />
+	</g>
+</svg>

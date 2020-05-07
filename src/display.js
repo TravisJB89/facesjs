@@ -97,8 +97,14 @@ const drawFeature = (svg, face, info) => {
     featureSVGString = featureSVGString.replace("$[headShave]", feature.shave);
   }
 
-  featureSVGString = featureSVGString.replace("$[skinColor]", face.body.color);
-  featureSVGString = featureSVGString.replace("$[skinTone]", face.body.tone);
+  featureSVGString = featureSVGString.replace(
+    /\$\[skinColor\]/g,
+    face.body.color
+  );
+  featureSVGString = featureSVGString.replace(
+    /\$\[skinTone\]/g,
+    face.body.tone
+  );
   featureSVGString = featureSVGString.replace(
     /\$\[hairColor\]/g,
     face.hair.color
@@ -221,11 +227,11 @@ const display = (container, face, overrides) => {
     },
     {
       name: "eye",
-      positions: [[140, 310], [260, 310]]
+      positions: [[150, 310], [250, 310]]
     },
     {
       name: "eyebrow",
-      positions: [[140, 265], [260, 265]]
+      positions: [[150, 265], [250, 265]]
     },
     {
       name: "mouth",

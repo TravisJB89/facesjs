@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="60" height="60">
+	<g id="eyes-4">
+		<path id="skin" d="M0 30L0 60L60 60L60 0L0 0L0 30Z" fill="$[skinColor]" />
+		<path id="skin-tone" d="M0 30L0 60L60 60L60 0L0 0L0 30Z" mix-blend-mode="color-burn" fill="$[skinTone]" />
+		<path id="eyelid-stroke" d="M23.24 54.46C9.85 50.99 1.84 37.37 5.31 23.99C8.78 10.6 22.39 2.59 35.78 6.06C49.16 9.53 57.18 23.14 53.71 36.53C50.24 49.91 36.62 57.93 23.24 54.46Z" fill='none' stroke="#000" stroke-width="1" />
+		<path id="eyelid" d="M0 42.5L0 60L60 60L60 25L0 25L0 42.5Z" fill="$[skinColor]" />
+		<path id="eyelid-tone" d="M0 42.5L0 60L60 60L60 25L0 25L0 42.5Z" mix-blend-mode="color-burn" fill="$[skinTone]" />
+		<path id="white" d="M29.5 55C15.95 55 5 43.82 5 30C5 25 5 25 5 25L54 25C54 25 54 25 54 30C54 43.82 43.04 55 29.5 55Z" fill="#fff" stroke="#000" stroke-width="1" />
+		<path id="pupil" d="M29.44 38.96C25.58 38.65 22.71 35.28 23.01 31.42C23.32 27.57 26.69 24.69 30.55 25C34.4 25.3 37.28 28.67 36.97 32.53C36.67 36.39 33.3 39.26 29.44 38.96Z" fill="#000" stroke="#000" stroke-width="1" />
+		
+	</g>
+</svg>
