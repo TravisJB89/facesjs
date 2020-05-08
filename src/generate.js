@@ -36,32 +36,12 @@ const colors = [
   {
     skin: "#ce967d",
     hair: ["#272421", "#423125"],
-    eye: [
-      "#6c89cd",
-      "#432f2d",
-      "#432f2d",
-      "#634842",
-      "#755048",
-      "#432f2d",
-      "#432f2d",
-      "#634842",
-      "#755048"
-    ]
+    eye: ["#432f2d", "#634842", "#755048", "#432f2d", "#634842", "#755048"]
   },
   {
     skin: "#bb876f",
     hair: ["#272421"],
-    eye: [
-      "#6c89cd",
-      "#4f4140",
-      "#432f2d",
-      "#634842",
-      "#755048",
-      "#432f2d",
-      "#432f2d",
-      "#634842",
-      "#755048"
-    ]
+    eye: ["#4f4140", "#432f2d", "#634842", "#755048", "#634842", "#755048"]
   },
   {
     skin: "#aa816f",
@@ -81,22 +61,22 @@ const colors = [
   {
     skin: "#a67358",
     hair: ["#272421"],
-    eye: ["#432f2d", "#432f2d", "#634842", "#755048"]
+    eye: ["#4f4140", "#432f2d", "#634842", "#755048"]
   },
   {
     skin: "#ad6453",
     hair: ["#272421"],
-    eye: ["#432f2d", "#432f2d", "#634842", "#755048"]
+    eye: ["#4f4140", "#432f2d", "#634842", "#755048"]
   },
   {
     skin: "#74453d",
     hair: ["#272421"],
-    eye: ["#432f2d", "#432f2d", "#634842", "#755048"]
+    eye: ["#4f4140", "#432f2d", "#634842", "#755048"]
   },
   {
     skin: "#5c3937",
     hair: ["#272421"],
-    eye: ["#432f2d", "#432f2d", "#634842", "#755048"]
+    eye: ["#4f4140", "#432f2d", "#634842", "#755048"]
   }
 ];
 
@@ -145,9 +125,6 @@ const generate = overrides => {
     miscLine: {
       id: Math.random() < 0.5 ? getID("miscLine") : "none"
     },
-    facialHair: {
-      id: Math.random() < 0.5 ? getID("facialHair") : "none"
-    },
     eye: {
       id: getID("eye"),
       angle: eyeAngle,
@@ -166,6 +143,9 @@ const generate = overrides => {
     mouth: {
       id: getID("mouth"),
       flip: isFlipped
+    },
+    facialHair: {
+      id: Math.random() < 0.5 ? getID("facialHair") : "none"
     },
     nose: {
       id: getID("nose"),

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 29" width="80" height="29">
+	<g id="lips-0">
+		<path id="lips-color" d="M15 11C15 11 23 4 40 4C53.13 4 65 11 65 11C65 11 60.25 28 40 27.99C20 27.98 15 11 15 11Z" mix-blend-mode="multiply" fill="rgba(80, 20, 20, 0.20)" />
+		<path id="lips-line"  d="M13.81 10.79L20.36 15.15L59.64 15.15L66.19 10.79M25 6C25 6 35 4 40 4C45 4 55 6 55 6L55 7M25 23.99C25 23.99 34 27.63 40 27.63C46 27.63 55 24 55 24" fill='none' stroke="#000" stroke-width="1" />
+	</g>
+</svg>

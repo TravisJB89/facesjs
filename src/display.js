@@ -226,11 +226,6 @@ const display = (container, face, overrides) => {
       positions: [null]
     },
     {
-      name: "facialHair",
-      positions: [null],
-      scaleFatness: true
-    },
-    {
       name: "eye",
       positions: [[150, 310], [250, 310]]
     },
@@ -241,6 +236,11 @@ const display = (container, face, overrides) => {
     {
       name: "mouth",
       positions: [[200, 440]]
+    },
+    {
+      name: "facialHair",
+      positions: [null],
+      scaleFatness: true
     },
     {
       name: "nose",
