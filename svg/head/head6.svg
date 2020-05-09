@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600" width="400" height="600">
-	<path id="Head 6" class="head" d="M200 100C300 100 350 160 350 300C350 370 320 450 310 460C300 470 250 500 200 500C150 500 100 470 90 460C80 450 50 370 50 300C50 160 100 100 200 100Z" fill="$[skinColor]" stroke="#000000" stroke-width="1"/>
+	<path id="Head 6" class="head" d="M200 100C300 100 350 160 350 300C350 370 320 450 310 460C300 470 250 500 200 500C150 500 100 470 90 460C80 450 50 370 50 300C50 160 100 100 200 100Z" fill="$[skinColor]" stroke="#000000" stroke-width="5"/>
 	<!--  -->
 	<path id="head-6-tone" class="head-6-tone" d="M200 100C300 100 350 160 350 300C350 370 320 450 310 460C300 470 250 500 200 500C150 500 100 470 90 460C80 450 50 370 50 300C50 160 100 100 200 100Z" mix-blend-mode="color-burn" fill="$[skinTone]" />
 	<!--  -->

@@ -2,12 +2,12 @@
 	<g id="eyes-18">
 		<path id="skin" d="M0 30L0 60L60 60L60 0L0 0L0 30Z" fill="$[skinColor]" />
 		<path id="skin-tone" d="M0 30L0 60L60 60L60 0L0 0L0 30Z" mix-blend-mode="color-burn" fill="$[skinTone]" />
-		<path id="white" d="M25.2 54.94C11.58 52.54 2.52 39.59 4.92 25.98C7.32 12.36 20.26 3.3 33.88 5.7C47.49 8.1 56.56 21.04 54.16 34.66C51.76 48.27 38.81 57.34 25.2 54.94Z" fill="#fff" stroke="#000" stroke-width="1" />
+		<path id="white" d="M25.2 54.94C11.58 52.54 2.52 39.59 4.92 25.98C7.32 12.36 20.26 3.3 33.88 5.7C47.49 8.1 56.56 21.04 54.16 34.66C51.76 48.27 38.81 57.34 25.2 54.94Z" fill="#fff" stroke="#000" stroke-width="5" />
 		<path id="iris" d="M30 37C26.13 37 23 33.87 23 30C23 26.13 26.13 23 30 23C33.87 23 37 26.13 37 30C37 33.87 33.87 37 30 37Z" fill="#000" stroke="$[eyeColor]" stroke-width="15" />
 		<path id="pupil" d="M30 37C26.13 37 23 33.87 23 30C23 26.13 26.13 23 30 23C33.87 23 37 26.13 37 30C37 33.87 33.87 37 30 37Z" fill="#000" stroke="#000" stroke-width="1" />
 		<path id="light" d="M30 27C28.89 27 28 26.11 28 25C28 23.89 28.89 23 30 23C31.11 23 32 23.89 32 25C32 26.11 31.11 27 30 27Z" fill="#fff" />
 		<path id="eyelid" d="M11 46L52.43 41.55L60 60L0 60L11 46Z" fill="$[skinColor]" />
 		<path id="eyelid-tone" d="M11 46L52.43 41.55L60 60L0 60L11 46Z" mix-blend-mode="color-burn" fill="$[skinTone]" />
-		<path id="eyelid-stroke" d="M11 46L52.43 41.55" fill='none' stroke="#000" stroke-width="1" />
+		<path id="eyelid-stroke" d="M11 46L52.43 41.55" fill='none' stroke="#000" stroke-width="5" />
 	</g>
 </svg>
