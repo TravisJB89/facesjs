@@ -102,8 +102,6 @@ const drawFeature = (svg, face, info) => {
     face.eye.color
   );
 
-  // rgba(140, 0, 0, 0.20)
-
   featureSVGString = featureSVGString.replace(
     /\$\[skinColor\]/g,
     face.body.color
@@ -116,6 +114,7 @@ const drawFeature = (svg, face, info) => {
     /\$\[lipColor\]/g,
     face.mouth.color
   );
+  featureSVGString = featureSVGString.replace(/\$\[aging\]/g, face.aging);
   featureSVGString = featureSVGString.replace(
     /\$\[hairColor\]/g,
     face.hair.color
@@ -224,6 +223,14 @@ const display = (container, face, overrides) => {
       scaleFatness: true
     },
     {
+      name: "eye",
+      positions: [[150, 310], [250, 310]]
+    },
+    {
+      name: "agingForehead",
+      positions: [null]
+    },
+    {
       name: "eyeLine",
       positions: [null]
     },
@@ -234,10 +241,6 @@ const display = (container, face, overrides) => {
     {
       name: "miscLine",
       positions: [null]
-    },
-    {
-      name: "eye",
-      positions: [[150, 310], [250, 310]]
     },
     {
       name: "eyebrow",

@@ -18,7 +18,7 @@ const colors = [
       "#e9c67b",
       "#D7BF91"
     ],
-    eye: ["#6c89cd", "#6ca596", "#432f2d", "#634842"]
+    eye: ["#6c89cd", "#a1aec9", "#90b3fc", "#6ca596", "#634842", "#a36447"]
   },
   {
     skin: "#eab08d",
@@ -31,17 +31,33 @@ const colors = [
       "#e9c67b",
       "#D7BF91"
     ],
-    eye: ["#6c89cd", "#6ca596", "#432f2d", "#634842"]
+    eye: ["#6c89cd", "#a1aec9", "#634842", "#a36447"]
   },
   {
     skin: "#ce967d",
     hair: ["#272421", "#423125"],
-    eye: ["#432f2d", "#634842", "#755048", "#432f2d", "#634842", "#755048"]
+    eye: [
+      "#432f2d",
+      "#634842",
+      "#755048",
+      "#432f2d",
+      "#634842",
+      "#755048",
+      "#a36447"
+    ]
   },
   {
     skin: "#bb876f",
     hair: ["#272421"],
-    eye: ["#4f4140", "#432f2d", "#634842", "#755048", "#634842", "#755048"]
+    eye: [
+      "#4f4140",
+      "#432f2d",
+      "#634842",
+      "#755048",
+      "#634842",
+      "#755048",
+      "#a36447"
+    ]
   },
   {
     skin: "#aa816f",
@@ -55,28 +71,29 @@ const colors = [
       "#432f2d",
       "#432f2d",
       "#634842",
-      "#755048"
+      "#755048",
+      "#a36447"
     ]
   },
   {
     skin: "#a67358",
     hair: ["#272421"],
-    eye: ["#4f4140", "#432f2d", "#634842", "#755048"]
+    eye: ["#4f4140", "#432f2d", "#634842", "#755048", "#a36447"]
   },
   {
     skin: "#ad6453",
     hair: ["#272421"],
-    eye: ["#4f4140", "#432f2d", "#634842", "#755048"]
+    eye: ["#4f4140", "#432f2d", "#634842", "#755048", "#a36447"]
   },
   {
     skin: "#74453d",
     hair: ["#272421"],
-    eye: ["#4f4140", "#432f2d", "#634842", "#755048"]
+    eye: ["#4f4140", "#432f2d", "#634842", "#755048", "#a36447"]
   },
   {
     skin: "#5c3937",
     hair: ["#272421"],
-    eye: ["#4f4140", "#432f2d", "#634842", "#755048"]
+    eye: ["#4f4140", "#432f2d", "#634842", "#755048", "#a36447"]
   }
 ];
 
@@ -96,6 +113,7 @@ const generate = overrides => {
 
   const face = {
     fatness: roundTwoDecimals(Math.random()),
+    aging: roundTwoDecimals(Math.random() * Math.random()),
     teamColors: defaultTeamColors,
     body: {
       id: getID("body"),
@@ -118,6 +136,15 @@ const generate = overrides => {
         Math.random() < 0.25 ? roundTwoDecimals(Math.random() / 5) : 0
       })`
     },
+    eye: {
+      id: getID("eye"),
+      angle: eyeAngle,
+      color: eyeColor,
+      size: roundTwoDecimals(0.9 + 0.2 * Math.random())
+    },
+    agingForehead: {
+      id: getID("agingForehead")
+    },
     eyeLine: {
       id: Math.random() < 0.75 ? getID("eyeLine") : "none"
     },
@@ -127,12 +154,6 @@ const generate = overrides => {
     },
     miscLine: {
       id: Math.random() < 0.5 ? getID("miscLine") : "none"
-    },
-    eye: {
-      id: getID("eye"),
-      angle: eyeAngle,
-      color: eyeColor,
-      size: roundTwoDecimals(0.9 + 0.2 * Math.random())
     },
     eyebrow: {
       id: getID("eyebrow"),
