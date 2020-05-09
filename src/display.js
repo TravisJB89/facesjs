@@ -102,6 +102,8 @@ const drawFeature = (svg, face, info) => {
     face.eye.color
   );
 
+  // rgba(140, 0, 0, 0.20)
+
   featureSVGString = featureSVGString.replace(
     /\$\[skinColor\]/g,
     face.body.color
@@ -109,6 +111,10 @@ const drawFeature = (svg, face, info) => {
   featureSVGString = featureSVGString.replace(
     /\$\[skinTone\]/g,
     face.body.tone
+  );
+  featureSVGString = featureSVGString.replace(
+    /\$\[lipColor\]/g,
+    face.mouth.color
   );
   featureSVGString = featureSVGString.replace(
     /\$\[hairColor\]/g,
@@ -197,6 +203,10 @@ const display = (container, face, overrides) => {
   const featureInfos = [
     {
       name: "body",
+      positions: [null]
+    },
+    {
+      name: "tattoo",
       positions: [null]
     },
     {

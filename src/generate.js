@@ -102,6 +102,9 @@ const generate = overrides => {
       color: skinColor,
       tone: `rgba(255,153,62,${Math.fround(Math.random() / 2)})`
     },
+    tattoo: {
+      id: Math.random() < 0.5 ? getID("tattoo") : "none"
+    },
     jersey: {
       id: getID("jersey")
     },
@@ -142,6 +145,10 @@ const generate = overrides => {
     },
     mouth: {
       id: getID("mouth"),
+      color: `rgba(${30 + Math.floor(Math.random() * 90)}, ${Math.floor(
+        Math.random() * 30
+      )}, ${Math.floor(Math.random() * 30)}, ${Math.floor(Math.random() * 30) /
+        100})`,
       flip: isFlipped
     },
     facialHair: {

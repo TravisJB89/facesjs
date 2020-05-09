@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 28" width="70" height="28">
+	<g id="mouth-02">
+		<path id="lips-color" d="M1 3C1 3 12 1.14 35 1C51.67 0.9 69 3 69 3C69 3 57.67 26.31 35 27C12.68 27.68 1 3 1 3Z" fill="$[lipColor]" />
+		<path id="teeth" d="M11 5C11 5 25 6.71 35 6.71C45 6.71 59 5 59 5C59 5 51 15 35 15C19 15 11 5 11 5Z" fill='#fff' />
+		<path id="lips-line" d="M11 5C11 5 25 6.71 35 6.71C45 6.71 59 5 59 5C59 5 51 15 35 15C19 15 11 5 11 5ZM1 3C1 3 6 6.19 11 5M69 3C69 3 64 6.19 59 5M20.71 23.69C35.86 27.83 37 27.55 49.86 23.12" fill='none' stroke="#000" stroke-width="1" />
+	</g>
+</svg>
