@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="60" height="60">
 	<g id="eyes-1">
-		<path id="white" d="M30 55C16.17 55 5 43.82 5 30C5 16.17 16.17 5 30 5C43.82 5 55 16.17 55 30C55 43.82 43.82 55 30 55Z" fill="#fff" stroke="#000" stroke-width="5" />
+		<path id="white" d="M30 55C16.17 55 5 43.82 5 30C5 16.17 16.17 5 30 5C43.82 5 55 16.17 55 30C55 43.82 43.82 55 30 55Z" fill="#fff" stroke="#000" stroke-width="1" />
 		<path id="iris" d="M30 37C26.13 37 23 33.87 23 30C23 26.13 26.13 23 30 23C33.87 23 37 26.13 37 30C37 33.87 33.87 37 30 37Z" fill="#000" stroke="$[eyeColor]" stroke-width="15" />
 		<path id="pupil" d="M30 23C20 23 20 38 30 38C40 38 40 23 30 23Z" fill="#000" stroke="#000" stroke-width="1" />
 		<path id="light" d="M30 27C28.89 27 28 26.11 28 25C28 23.89 28.89 23 30 23C31.11 23 32 23.89 32 25C32 26.11 31.11 27 30 27Z" fill="#fff" />
