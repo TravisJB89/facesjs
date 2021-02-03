@@ -6,7 +6,7 @@ const getID = (type: string): string => {
   return svgsIndex[type][Math.floor(Math.random() * svgsIndex[type].length)];
 };
 
-type Race = "white" | "black" | "asian" | "hispanic";
+type Race = "asian" | "black" | "brown" | "white";
 
 const colors = {
   white: {
@@ -17,7 +17,7 @@ const colors = {
     skin: ["#bbcd8c", "#469890", "#9cd7b7", "#92dde3", "#71b1b7", "#8e79a4"],
     hair: ["#5f916a", "#af5454", "#447298", "#5d6a99", "#458c93", "#856d9f"],
   },
-  hispanic: {
+  brown: {
     skin: ["#bbcd8c", "#469890", "#9cd7b7", "#92dde3", "#71b1b7", "#8e79a4"],
     hair: ["#5f916a", "#af5454", "#447298", "#5d6a99", "#458c93", "#856d9f"],
   },
@@ -31,21 +31,21 @@ const defaultTeamColors = ["#0d435e", "#f0494a", "#cccccc"];
 
 const roundTwoDecimals = (x: number) => Math.round(x * 100) / 100;
 
-const generate = (overrides: Overrides, options: { race: Race }) => {
+const generate = (overrides?: Overrides, options?: { race?: Race }) => {
   const playerRace: Race = (function () {
-    if (options == null) {
-      switch (Math.floor(Math.random() * 4)) {
-        case 0:
-          return "white";
-        case 1:
-          return "asian";
-        case 2:
-          return "hispanic";
-        case 3:
-          return "black";
-      }
+    if (options && options.race) {
+      return options.race;
     }
-    return options.race;
+    switch (Math.floor(Math.random() * 4)) {
+      case 0:
+        return "white";
+      case 1:
+        return "asian";
+      case 2:
+        return "brown";
+      default:
+        return "black";
+    }
   })();
 
   const eyeAngle = Math.round(Math.random() * 25 - 10);
@@ -56,8 +56,8 @@ const generate = (overrides: Overrides, options: { race: Race }) => {
         return colors.white;
       case "asian":
         return colors.asian;
-      case "hispanic":
-        return colors.hispanic;
+      case "brown":
+        return colors.brown;
       case "black":
         return colors.black;
     }
@@ -67,15 +67,12 @@ const generate = (overrides: Overrides, options: { race: Race }) => {
   const hairColor =
     palette.hair[Math.floor(Math.random() * palette.hair.length)];
   const isFlipped = Math.random() < 0.5;
-  const hairType = getID("hair");
 
   const face = {
     fatness: roundTwoDecimals(Math.random()),
     teamColors: defaultTeamColors,
     hairBg: {
-      id: hairType,
-      color: skinColor,
-      flip: isFlipped,
+      id: Math.random() < 0.1 ? getID("hairBg") : "none",
     },
     body: {
       id: getID("body"),
@@ -86,7 +83,7 @@ const generate = (overrides: Overrides, options: { race: Race }) => {
     },
     ear: {
       id: getID("ear"),
-      size: roundTwoDecimals(0.75 + Math.random() * 0.5),
+      size: roundTwoDecimals(0.5 + Math.random()),
     },
     head: {
       id: getID("head"),
@@ -99,7 +96,7 @@ const generate = (overrides: Overrides, options: { race: Race }) => {
     },
     smileLine: {
       id: Math.random() < 0.75 ? getID("smileLine") : "none",
-      size: roundTwoDecimals(0.25 + Math.random() + Math.random()),
+      size: roundTwoDecimals(0.25 + 2 * Math.random()),
     },
     miscLine: {
       id: Math.random() < 0.5 ? getID("miscLine") : "none",
@@ -113,7 +110,7 @@ const generate = (overrides: Overrides, options: { race: Race }) => {
       angle: Math.round(Math.random() * 35 - 15),
     },
     hair: {
-      id: hairType,
+      id: getID("hair"),
       color: hairColor,
       flip: isFlipped,
     },
